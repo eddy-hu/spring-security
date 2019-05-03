@@ -28,6 +28,20 @@
 	<section name="org.eclipse.m2e.core.pom.dependencies">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="220" key="y"/>
+		<item value="450" key="height"/>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<list key="projectNameTemplate">

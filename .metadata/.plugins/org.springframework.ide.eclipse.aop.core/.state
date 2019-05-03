@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model/>
+<aop-reference-model>
+<aop-project name="spring-security-browser"/>
+<aop-project name="spring-security-core"/>
+<aop-project name="spring-security-app"/>
+<aop-project name="spring-security-demo"/>
+</aop-reference-model>
