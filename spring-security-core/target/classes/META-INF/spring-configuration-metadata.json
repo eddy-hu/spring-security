@@ -1,0 +1,17 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
+      "name": "tcs.security",
+      "type": "org.thecodeschool.security.core.properties.SecurityProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
+      "name": "tcs.security.browser",
+      "type": "org.thecodeschool.security.core.properties.BrowserProperties"
+    }
+  ]
+}
