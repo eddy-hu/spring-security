@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.ArrayUtils;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
@@ -21,7 +22,7 @@ import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.thecodeschool.security.core.properties.SecurityProperties;
 
-public class ValidateCodeFilter extends OncePerRequestFilter implements InitializingBean {
+public class SmsCodeFilter extends OncePerRequestFilter implements InitializingBean {
 
 	private AuthenticationFailureHandler authenticationFailureHandler;
 
@@ -37,13 +38,13 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 	public void afterPropertiesSet() throws ServletException {
 		super.afterPropertiesSet();
 		String[] configUrls = StringUtils
-				.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getImage().getUrl(), ",");
-		if(configUrls!=null) {
+				.splitByWholeSeparatorPreserveAllTokens(securityProperties.getCode().getSms().getUrl(), ",");
+		if(ArrayUtils.isNotEmpty(configUrls)) {
 			for (String configUrl : configUrls) {
 				urls.add(configUrl);
 			}			
 		}
-		urls.add("/authentication/form");
+		urls.add("/authentication/mobile");
 	}
 
 	@Override
@@ -72,20 +73,20 @@ public class ValidateCodeFilter extends OncePerRequestFilter implements Initiali
 
 	private void validate(ServletWebRequest request) throws ServletRequestBindingException {
 
-		ImageCode imageCode = (ImageCode) sessionStrategy.getAttribute(request, ValidateCodeController.IMAGE_SESSION_KEY);
-		String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "imageCode");
+		ValidateCode code = (ValidateCode) sessionStrategy.getAttribute(request, ValidateCodeController.MOBILE_SESSION_KEY);
+		String codeInRequest = ServletRequestUtils.getStringParameter(request.getRequest(), "smsCode");
 		if (StringUtils.isBlank(codeInRequest)) {
 			throw new ValidateCodeException("Cannot be empty");
 		}
-		if (imageCode.isExpired()) {
-			sessionStrategy.removeAttribute(request, ValidateCodeController.IMAGE_SESSION_KEY);
+		if (code.isExpired()) {
+			sessionStrategy.removeAttribute(request, ValidateCodeController.MOBILE_SESSION_KEY);
 			throw new ValidateCodeException("Code is expired");
 		}
-		if (!StringUtils.equals(codeInRequest, imageCode.getCode())) {
+		if (!StringUtils.equals(codeInRequest, code.getCode())) {
 			throw new ValidateCodeException("Did not matched");
 		}
 
-		sessionStrategy.removeAttribute(request, ValidateCodeController.IMAGE_SESSION_KEY);
+		sessionStrategy.removeAttribute(request, ValidateCodeController.MOBILE_SESSION_KEY);
 	}
 
 	public SessionStrategy getSessionStrategy() {

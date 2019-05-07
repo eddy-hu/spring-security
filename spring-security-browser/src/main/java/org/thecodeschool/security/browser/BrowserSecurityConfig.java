@@ -15,7 +15,9 @@ import org.springframework.security.web.authentication.rememberme.JdbcTokenRepos
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.thecodeschool.security.browser.authentication.TcsAuthenticationFailureHandler;
 import org.thecodeschool.security.browser.authentication.TcsAuthenticationSuccessHandler;
+import org.thecodeschool.security.core.authentication.mobile.SmsCodeAuthenticationSecurityConfig;
 import org.thecodeschool.security.core.properties.SecurityProperties;
+import org.thecodeschool.security.core.validate.code.SmsCodeFilter;
 import org.thecodeschool.security.core.validate.code.ValidateCodeFilter;
 
 @Configuration
@@ -35,6 +37,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	private UserDetailsService userDetailsService;
+	
+	@Autowired
+	private SmsCodeAuthenticationSecurityConfig smsCodeAuthenticationSecurityConfig;
 	
 	@Bean
 	public PasswordEncoder passwordEncoder() {
@@ -56,9 +61,15 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter{
 		validateCodeFilter.setAuthenticationFailureHandler(tcsAuthenticationFailureHandler);
 		validateCodeFilter.setSecurityProperties(securityProperties);
 		validateCodeFilter.afterPropertiesSet();
+
+		SmsCodeFilter smsCodeFilter = new SmsCodeFilter();
+		smsCodeFilter.setAuthenticationFailureHandler(tcsAuthenticationFailureHandler);
+		smsCodeFilter.setSecurityProperties(securityProperties);
+		smsCodeFilter.afterPropertiesSet();
 		
 		//http.httpBasic() prompt login
-		http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
+		http.addFilterBefore(smsCodeFilter, UsernamePasswordAuthenticationFilter.class)
+			.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
 			.formLogin()// form login
 				.loginPage("/authentication/require")
 				.loginProcessingUrl("/authentication/form")
@@ -73,12 +84,13 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter{
 			.authorizeRequests()
 			.antMatchers("/authentication/require",
 					securityProperties.getBrowser().getLoginPage(),
-					"/code/image"
+					"/code/*"
 					).permitAll() //give the permission to login page
 			.anyRequest()
 			.authenticated()
 			.and()
-			.csrf().disable();
+			.csrf().disable()
+			.apply(smsCodeAuthenticationSecurityConfig);
 	}
 	
 }

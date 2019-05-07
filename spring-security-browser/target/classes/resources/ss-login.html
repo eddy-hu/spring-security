@@ -7,37 +7,56 @@
 
 <body>
 
-<h2>Login page</h2>
+	<h2>Login page</h2>
+	<form action="/authentication/form" method="post">
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>Validation:</td>
+				<td><input type="text" name="imageCode"> <img
+					src="/code/image?width=200"></td>
+			</tr>
+			<tr>
+				<!-- for rememberMe feature -->
+				<td colspan="2"><input name="remember-me" type="checkbox"
+					value="true">Remember Me</td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Login</button></td>
+			</tr>
 
-<form action="/authentication/form" method="post">
-<table>
-	<tr>
-		<td>Username: </td>
-		<td><input type="text" name="username"></td>
-	</tr>
-	<tr>
-		<td>Password: </td>
-		<td><input type="password" name="password"></td>
-	</tr>
-	<tr>
-		<td>Validation: </td>
-		<td>
-			<input type="text" name="imageCode">
-			<img src="/code/image?width=200" >
-		</td>
-	</tr>
-	<tr>
-		<td colspan="2"><input name="remember-me" type="checkbox" value="true">Remember Me</td>
-	</tr>
-	<tr>
-		<td colspan="2"><button type="submit">Login</button></td>
-	</tr>
-		
+		</table>
+	</form>
+	
+	
+	<h2>Phone login</h2>
+	<form action="/authentication/mobile" method="post">
+		<table>
+			<tr>
+				<td>Phone Number:</td>
+				<td><input type="text" name="mobile" value="6137777777"></td>
+			</tr>
+			<tr>
+				<td>Code:</td>
+				<td>
+					<input type="text" name="smsCode">
+					<a href="/code/sms?mobile=6137777777">Send Code</a>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Login</button></td>
+			</tr>
 
-</table>
-
-</form>
-
+		</table>
+	</form>
+	
 </body>
 
 </html>
