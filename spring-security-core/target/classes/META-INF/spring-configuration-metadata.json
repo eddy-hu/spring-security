@@ -12,6 +12,11 @@
       "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
       "name": "tcs.security.browser",
       "type": "org.thecodeschool.security.core.properties.BrowserProperties"
+    },
+    {
+      "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
+      "name": "tcs.security.code",
+      "type": "org.thecodeschool.security.core.properties.ValidateCodeProperties"
     }
   ]
 }

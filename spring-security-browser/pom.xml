@@ -16,10 +16,12 @@
   		<version>${tcs-spring-security.version}</version>
   	</dependency>
   	
-  	<dependency>
-  		<groupId>org.springframework.session</groupId>
-  		<artifactId>spring-session</artifactId>
-  	</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework.session/spring-session -->
+	<dependency>
+	    <groupId>org.springframework.session</groupId>
+	    <artifactId>spring-session</artifactId>
+	    <version>1.3.3.RELEASE</version>
+	</dependency>
   	
   </dependencies>
   

@@ -33,9 +33,9 @@ public class MyUserDetailsService implements UserDetailsService{
 		
 		//another constructor to handle more validations
 		//new User(username, username, true, true, true, false, AuthorityUtils.commaSeparatedStringToAuthorityList("admin")); 
-		logger.info(passwordEncoder.encode(username));
+		//logger.info(passwordEncoder.encode(username));
 		
-		return new User(username,"temp-password",AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+		return new User(username,passwordEncoder.encode("password"),AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 	}
 
 }
