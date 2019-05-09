@@ -5,7 +5,208 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2019-05-03T10:00:00Z</updated>
+  <updated>2019-05-08T17:52:00Z</updated>
+  <entry>
+    <title>Spring Tips: Reactive Web Views</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/05/08/spring-tips-reactive-web-views" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-05-08:3667</id>
+    <updated>2019-05-08T17:52:00Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! In this installment of Spring Tips we look at how to create dynamic views using Spring Webflux, server-sent events, websockets and Thymeleaf&amp;rsquo;s reactive model attributes.&lt;/p&gt;
+&lt;p&gt;speaker: &lt;a href="http://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ewpJ9EUAz5s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.1.0.M1 Released!</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/05/07/spring-boot-for-apache-geode-pivotal-gemfire-1-1-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2019-05-07:3665</id>
+    <updated>2019-05-07T19:17:42Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;I am pleased to announce the release of &lt;em&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire/PCC&lt;/em&gt; (SBDG) &lt;code&gt;1.1.0.M1&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Bits (&lt;code&gt;org.springframework.geode:spring-geode-starter:1.1.0.M1&lt;/code&gt;) are available in the Spring &lt;a href="http://repo.spring.io/libs-milestone/org/springframework/geode/spring-geode-starter/1.1.0.M1/"&gt;libs-milestone&lt;/a&gt; repository.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-new"&gt;&lt;a class="anchor" href="#whats-new"&gt;&lt;/a&gt;What&amp;#8217;s New&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The SBDG 1.1 Milestone 1 (M1) release includes:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Rebases SBDG on Spring Framework 5.1, Spring Boot 2.1, Spring Data Lovelace
+and Spring Session 2.1.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rebases SBDG on Apache Geode 1.6.0 and Pivotal GemFire 9.5.3.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For a complete list of changes, see the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/blob/1.1.0.M1/spring-geode/src/main/resources/changelog.txt#L7-L21"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-next"&gt;&lt;a class="anchor" href="#whats-next"&gt;&lt;/a&gt;What&amp;#8217;s Next&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;SBDG 1.1 M2 will include dedicated support for &lt;em&gt;In-line Caching&lt;/em&gt;, the second caching pattern in our 3 separate caching patters [&lt;em&gt;Look-Aside&lt;/em&gt;, &lt;em&gt;Inline&lt;/em&gt;, &lt;em&gt;Near&lt;/em&gt;].&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;As a friendly reminder, Spring&amp;#8217;s &lt;a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache"&gt;Cache Abstraction&lt;/a&gt; already provides excellent support for the &lt;em&gt;Look-Aside Caching&lt;/em&gt; pattern, and SBDG (by extension of SDG) provides &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.RELEASE/reference/html5/#geode-caching-provider"&gt;first-class support&lt;/a&gt; for using either Apache Geode or Pivotal GemFire/PCC as a caching provider in Spring&amp;#8217;s &lt;em&gt;Cache Abstraction&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;This was also covered nicely in the &lt;strong&gt;new&lt;/strong&gt; &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.RELEASE/reference/html5/#geode-samples"&gt;Sample&lt;/a&gt; on &lt;em&gt;Look-Aside Caching&lt;/em&gt;, containing both a &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.RELEASE/reference/html5/guides/caching-look-aside.html"&gt;Guide&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/tree/1.0.0.RELEASE/spring-geode-samples/caching/look-aside"&gt;Example Code&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="feedback"&gt;&lt;a class="anchor" href="#feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;We want to hear from you.  Feedback is the cornerstone of any successful project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 7th, 2019</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/05/07/this-week-in-spring-may-7th-2019" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2019-05-07:3666</id>
+    <updated>2019-05-07T15:05:57Z</updated>
+    <content type="html">&lt;p&gt;Hi Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;ve been in beautiful Sao Paolo, Brazil for QCon Sao Paolo then it&amp;rsquo;s off to Devoxx UK in London. As usual, lots of good stuff to get to so let&amp;rsquo;s get to it.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/05/07/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-release-available"&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire 1.0.0.RELEASE Available!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/05/03/a-bootiful-podcast-spring-cloud-engineer-olga-maciaszek-sharma"&gt;A Bootiful Podcast: Spring Cloud Engineer Olga Maciaszek-Sharma&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/05/01/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-rc2-released"&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire 1.0.0.RC2 Released!&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Interesting thread on Reddit.com: &lt;a href="https://www.reddit.com/r/java/comments/bkjnoi/docker_and_spring_boot_done_properly/"&gt;Docker and Spring Boot done properly? &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2019/05/spring-cloud-pluggable-circuit"&gt;Spring Cloud Introduces Pluggable Circuit-Breaker Interface&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://itnext.io/microservices-with-spring-boot-and-spring-cloud-441e3dabc67d"&gt;Microservices with Spring Boot and Spring Cloud.&lt;/a&gt; This is part 3 of a series, titled &amp;ldquo;From config server to OAuth2 server (without in-Memory things)&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://billykorando.com/2019/05/06/jpa-or-sql-in-a-spring-boot-application-why-not-both/"&gt;JPA or SQL in a Spring Boot Application? Why Not Both? &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;DZone have my Spring Tips installment on WebMvc.fn up and &lt;a href="https://dzone.com/articles/spring-tips-webmvcfn-the-functional-dsl-for-spring"&gt;it was a good reminder that people might like to see this&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;This is kind of interesting - it looks &lt;a href="https://stackabuse.com/spring-cloud-hystrix/"&gt;at the Spring Cloud Hystrix integration&lt;/a&gt;. If I were building new software today &lt;a href="https://spring.io/blog/2019/04/24/spring-tips-spring-cloud-circuit-breaker"&gt;I&amp;rsquo;d start with the Spring Cloud Circuit Breaker abstraction, though&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Baeldung have updated their epic post &lt;a href="https://www.baeldung.com/spring-cloud-data-flow-spark"&gt;on using Spring Cloud Data Flow with Apache Spark&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot for Apache Geode &amp; Pivotal GemFire 1.0.0.RELEASE Available!</title>
+    <link rel="alternate" href="https://spring.io/blog/2019/05/07/spring-boot-for-apache-geode-pivotal-gemfire-1-0-0-release-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>John Blum</name>
+    </author>
+    <id>tag:spring.io,2019-05-07:3664</id>
+    <updated>2019-05-07T04:41:49Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;At long last, it is my distinct pleasure to announce the release of &lt;em&gt;Spring Boot for Apache Geode &amp;amp; Pivotal GemFire&lt;/em&gt; (SBDG) &lt;code&gt;1.0.0.RELEASE&lt;/code&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The list of people to thank is long.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;First, to &lt;strong&gt;Dr. Mark Pollack&lt;/strong&gt; for your feedback real early on in the beginning of the project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To &lt;strong&gt;Mr. Josh Long&lt;/strong&gt; for sitting with me for 2 hours after midnight during S1P-2018 to give me feedback on using Apache Geode with Spring Boot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To &lt;strong&gt;Mr. Phil Webb&lt;/strong&gt;, and the entire Spring Boot ream, for providing guidance.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;To the few &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/graphs/contributors"&gt;community members&lt;/a&gt; who contributed PRs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;And finally, to everyone else for your support and patience while this project came to be.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;\o/ .oO(Victory!)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;SBDG 1.0 GA &lt;a href="https://search.maven.org/search?q=spring-geode-starter"&gt;bits&lt;/a&gt; are available in &lt;em&gt;Maven Central&lt;/em&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-new"&gt;&lt;a class="anchor" href="#whats-new"&gt;&lt;/a&gt;What&amp;#8217;s New&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The SBDG 1.0 GA release includes:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Polishes the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode#documentation"&gt;reference documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;New Sample with &lt;a href="https://docs.spring.io/autorepo/docs/spring-boot-data-geode-build/1.0.0.RELEASE/reference/html5/guides/caching-look-aside.html"&gt;Guide&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/tree/1.0.0.RELEASE/spring-geode-samples/caching/look-aside"&gt;Example Application&lt;/a&gt; Code for the &lt;em&gt;Look-Aside Cache&lt;/em&gt; pattern.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Upgrades to &lt;em&gt;Spring Test for Apache Geode &amp;amp; Pivotal GemFire&lt;/em&gt; (STDG) &lt;code&gt;0.0.1.RELEASE&lt;/code&gt; . More details on this new and upcoming project can be found &lt;a href="https://github.com/spring-projects/spring-test-data-geode"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For a complete list of changes, see the &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/blob/1.0.0.RELEASE/spring-geode/src/main/resources/changelog.txt#L7-L14"&gt;changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="whats-next"&gt;&lt;a class="anchor" href="#whats-next"&gt;&lt;/a&gt;What&amp;#8217;s Next&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Now with the 1.0 GA out the door, all attention moves to 1.1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;SBDG 1.1 will be rebased on:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="ulist"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Framework 5.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Boot 2.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Data Lovelace&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Spring Session 2.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;The &lt;code&gt;1.1.0.M1&lt;/code&gt; will be released and announced shortly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="sect1"&gt;
+&lt;h2 id="feedback"&gt;&lt;a class="anchor" href="#feedback"&gt;&lt;/a&gt;Feedback&lt;/h2&gt;
+&lt;div class="sectionbody"&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Feedback on the newly minted 1.0 GA is always appreciated and welcomed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-boot-data-geode/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot-data-geode/pulls"&gt;PR&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;StackOverflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring Cloud Engineer Olga Maciaszek-Sharma</title>
     <link rel="alternate" href="https://spring.io/blog/2019/05/03/a-bootiful-podcast-spring-cloud-engineer-olga-maciaszek-sharma" />
@@ -549,557 +750,5 @@
 &lt;p&gt;Beyond the basics to keep Spring Cloud Task up to date with the rest of the ecosystem, we are also working with the Spring Cloud Data Flow team to enhance the overall experience of running tasks with Data Flow. This includes things like documentation that is coming as well as the multi platform support that was released in Spring Cloud Data Flow 2.0.&lt;/p&gt;&lt;h2&gt;&lt;a href="#what-do-you-think" class="anchor" name="what-do-you-think"&gt;&lt;/a&gt;What Do You Think?&lt;/h2&gt;
 &lt;p&gt;We look forward to your feedback on these new features in &lt;a href="https://github.com/spring-cloud/spring-cloud-task/issues"&gt;Github&lt;/a&gt;, &lt;a href="http://stackoverflow.com/tags/spring-cloud-task"&gt;StackOverflow&lt;/a&gt;, &lt;a href="https://gitter.im/spring-cloud/spring-cloud-task"&gt;Gitter&lt;/a&gt;, or directly via Twitter to &lt;a href="https://twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt; or &lt;a href="https://twitter.com/cppwfs"&gt;@cppwfs&lt;/a&gt;!&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cloud.spring.io/spring-cloud-task/"&gt;Spring Cloud Task Home&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-task"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-cloud-task/docs/2.2.0.M1/reference/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Flight of the Flux 2 - Debugging Caveats</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/16/flight-of-the-flux-2-debugging-caveats" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Simon Baslé</name>
-    </author>
-    <id>tag:spring.io,2019-04-16:3647</id>
-    <updated>2019-04-16T16:45:13Z</updated>
-    <content type="html">&lt;p&gt;This blog post is the second in a series of posts that aim at providing a deeper look into &lt;a href="https://github.com/reactor/reactor-core"&gt;Reactor&lt;/a&gt;&amp;rsquo;s more advanced concepts and inner workings.&lt;/p&gt;
-&lt;p&gt;It is derived from my &lt;code&gt;Flight of the Flux&lt;/code&gt; talk, which content I found to be more adapted to a blog post format.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ll update the table below with links when the other posts are published, but here is the planned content:&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription"&gt;Assembly vs Subscription&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Debugging caveats (this post)&lt;/li&gt;
-  &lt;li&gt;Concurrent Agnostic&lt;/li&gt;
-  &lt;li&gt;Schedulers and &lt;code&gt;publishOn&lt;/code&gt; vs &lt;code&gt;subscribeOn&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Inner workings: work stealing&lt;/li&gt;
-  &lt;li&gt;Inner workings: operator fusion&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;If you&amp;rsquo;re missing an introduction to &lt;em&gt;Reactive Streams&lt;/em&gt; and the basic concepts of Reactor, head out to the site&amp;rsquo;s &lt;a href="https://projectreactor.io/learn"&gt;learning section&lt;/a&gt; and the &lt;a href="https://projectreactor.io/docs/core/release/reference"&gt;reference guide&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Without further ado, let&amp;rsquo;s jump in:&lt;/p&gt;&lt;h2&gt;&lt;a href="#debugging-in-a-reactive-world" class="anchor" name="debugging-in-a-reactive-world"&gt;&lt;/a&gt;Debugging in a Reactive World&lt;/h2&gt;
-&lt;p&gt;Switching from an imperative, blocking paradigm to a reactive, non-blocking one brings benefits but also comes with some caveats. One of these is the debugging experience. Why is that?&lt;/p&gt;
-&lt;p&gt;Primarily because you&amp;rsquo;ve learned to rely on the good old &lt;em&gt;stacktrace&lt;/em&gt;, but suddenly this invaluable tool becomes far less valuable due to the &lt;strong&gt;asynchronous&lt;/strong&gt; aspect of reactive programming. This is not specific to reactive programming though: as soon as you introduce asynchronous code, you create a boundary in the program between the code that &lt;em&gt;schedules&lt;/em&gt; and the code that &lt;em&gt;asynchronously executes&lt;/em&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#demonstrating-the-issue-with-vanilla-async-code" class="anchor" name="demonstrating-the-issue-with-vanilla-async-code"&gt;&lt;/a&gt;Demonstrating the issue with vanilla async code&lt;/h3&gt;
-&lt;p&gt;Let&amp;rsquo;s take an example with an &lt;code&gt;ExecutorService&lt;/code&gt; and a &lt;code&gt;Future&lt;/code&gt; (no Reactor code here):&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void imperative() throws ExecutionException, InterruptedException {&#xD;
-		final ScheduledExecutorService executor =&#xD;
-				Executors.newSingleThreadScheduledExecutor();&#xD;
-&#xD;
-		int seconds = LocalTime.now().getSecond();&#xD;
-		List&amp;lt;Integer&amp;gt; source;&#xD;
-		if (seconds % 2 == 0) {&#xD;
-			source = IntStream.range(1, 11).boxed().collect(Collectors.toList());&#xD;
-		}&#xD;
-		else if (seconds % 3 == 0) {&#xD;
-			source = IntStream.range(0, 4).boxed().collect(Collectors.toList());&#xD;
-		}&#xD;
-		else {&#xD;
-			source = Arrays.asList(1, 2, 3, 4);&#xD;
-		}&#xD;
-&#xD;
-		executor.submit(() -&amp;gt; source.get(5))  //line 76&#xD;
-		        .get();&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This example is a bit contrived, but let&amp;rsquo;s imagine that we have these two out of three path in the code that can lead to the asynchronous task throwing an &lt;code&gt;IndexOutOfBoundsException&lt;/code&gt;&amp;hellip; How helpful would the stacktrace be?&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;java.util.concurrent.ExecutionException: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4&#xD;
-	at java.base/java.util.concurrent.FutureTask.report(FutureTask.java:122)&#xD;
-	at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:191)&#xD;
-	at Scratch.imperative(Scratch.java:77)&#xD;
-	at Scratch.main(Scratch.java:50)&#xD;
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 4&#xD;
-	at java.base/java.util.Arrays$ArrayList.get(Arrays.java:4351)&#xD;
-	at Scratch.lambda$imperative$0(Scratch.java:76)&#xD;
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)&#xD;
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)&#xD;
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)&#xD;
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)&#xD;
-	at java.base/java.lang.Thread.run(Thread.java:834)&#xD;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We see that:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;the &lt;code&gt;Future&lt;/code&gt;&amp;rsquo;s &lt;code&gt;get()&lt;/code&gt; method threw an &lt;code&gt;ExecutionException&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;the cause is an &lt;code&gt;IndexOutOfBoundsException&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;the code throwing is in the &lt;code&gt;submit(() -&amp;gt; source.get(5))&lt;/code&gt; &lt;strong&gt;lambda&lt;/strong&gt; line 76&lt;/li&gt;
-  &lt;li&gt;it executed in a &lt;code&gt;FutureTask&lt;/code&gt;, from something called a &lt;code&gt;ThreadPoolExecutor&lt;/code&gt;, itself running in a &lt;code&gt;Thread&lt;/code&gt;&amp;hellip;&lt;/li&gt;
-  &lt;li&gt;we have two potential sources that could cause this but no idea which one is the culprit (which path was taken in the test prior to calling &lt;code&gt;submit()&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Not terribly useful :-(&lt;/p&gt;&lt;h3&gt;&lt;a href="#demonstrating-the-issue-in-reactor" class="anchor" name="demonstrating-the-issue-in-reactor"&gt;&lt;/a&gt;Demonstrating the issue in Reactor&lt;/h3&gt;
-&lt;p&gt;If we look for a Reactor equivalent to the above code, we can come up with this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void reactive() {&#xD;
-		int seconds = LocalTime.now().getSecond();&#xD;
-		Mono&amp;lt;Integer&amp;gt; source;&#xD;
-		if (seconds % 2 == 0) {&#xD;
-			source = Flux.range(1, 10)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-		else if (seconds % 3 == 0) {&#xD;
-			source = Flux.range(0, 4)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-		else {&#xD;
-			source = Flux.just(1, 2, 3, 4)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-&#xD;
-		source.subscribeOn(Schedulers.parallel())&#xD;
-		      .block(); //line 97&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Which triggers the following stacktrace:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;java.lang.IndexOutOfBoundsException&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onComplete(MonoElementAt.java:153)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.fastPath(FluxArray.java:176)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:96)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.request(MonoElementAt.java:92)&#xD;
-	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.trySchedule(MonoSubscribeOn.java:186)&#xD;
-	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.onSubscribe(MonoSubscribeOn.java:131)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onSubscribe(MonoElementAt.java:107)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:53)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:59)&#xD;
-	at reactor.core.publisher.MonoElementAt.subscribe(MonoElementAt.java:59)&#xD;
-	at reactor.core.publisher.Mono.subscribe(Mono.java:3711)&#xD;
-	at reactor.core.publisher.MonoSubscribeOn$SubscribeOnSubscriber.run(MonoSubscribeOn.java:123)&#xD;
-	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:84)&#xD;
-	at reactor.core.scheduler.WorkerTask.call(WorkerTask.java:37)&#xD;
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)&#xD;
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)&#xD;
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)&#xD;
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)&#xD;
-	at java.base/java.lang.Thread.run(Thread.java:834)&#xD;
-	Suppressed: java.lang.Exception: #block terminated with an error&#xD;
-		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:93)&#xD;
-		at reactor.core.publisher.Mono.block(Mono.java:1495)&#xD;
-		at Scratch.reactive(Scratch.java:97)&#xD;
-		at Scratch.main(Scratch.java:51)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-  &lt;li&gt;We see the &lt;code&gt;ArrayIndexOutOfBoundsException&lt;/code&gt; again, hinting at a source that was too short for the &lt;code&gt;MonoElementAt&lt;/code&gt; operator&lt;/li&gt;
-  &lt;li&gt;We see that it came from an &lt;code&gt;onComplete&lt;/code&gt;, itself triggered by &lt;code&gt;request&lt;/code&gt;&amp;hellip; and a bunch of other steps in &lt;code&gt;reactor.core.publisher&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;With a bit of familiarity with these reactor methods, we &lt;em&gt;might&lt;/em&gt; deduce that the pipeline was made up of &lt;code&gt;range&lt;/code&gt; (&lt;code&gt;FluxRange.subscribe&lt;/code&gt;), &lt;code&gt;elementAt&lt;/code&gt; and &lt;code&gt;subscribeOn&lt;/code&gt;&amp;hellip;&lt;/li&gt;
-  &lt;li&gt;It seems the throwing code was executed from the worker &lt;code&gt;Thread&lt;/code&gt; of a &lt;code&gt;ThreadPoolExecutor&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;The trail goes cold here&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Worse, even if we did get rid of &lt;code&gt;subscribeOn&lt;/code&gt; we&amp;rsquo;d still wouldn&amp;rsquo;t discover which of the two possible error paths was triggered:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void reactiveNoSubscribeOn() {&#xD;
-		int seconds = LocalTime.now().getSecond();&#xD;
-		Mono&amp;lt;Integer&amp;gt; source;&#xD;
-		if (seconds % 2 == 0) {&#xD;
-			source = Flux.range(1, 10)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-		else if (seconds % 3 == 0) {&#xD;
-			source = Flux.range(0, 4)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-		else {&#xD;
-			source = Flux.just(1, 2, 3, 4)&#xD;
-			             .elementAt(5);&#xD;
-		}&#xD;
-&#xD;
-		source.block(); //line 116&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Gives the stacktrace:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;java.lang.IndexOutOfBoundsException&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onComplete(MonoElementAt.java:153)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.fastPath(FluxArray.java:176)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:96)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.request(MonoElementAt.java:92)&#xD;
-	at reactor.core.publisher.BlockingSingleSubscriber.onSubscribe(BlockingSingleSubscriber.java:49)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onSubscribe(MonoElementAt.java:107)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:53)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:59)&#xD;
-	at reactor.core.publisher.MonoElementAt.subscribe(MonoElementAt.java:59)&#xD;
-	at reactor.core.publisher.Mono.block(Mono.java:1494)&#xD;
-	at Scratch.reactiveNoSubscribeOn(Scratch.java:116)&#xD;
-	at Scratch.main(Scratch.java:52)&#xD;
-	Suppressed: java.lang.Exception: #block terminated with an error&#xD;
-		at reactor.core.publisher.BlockingSingleSubscriber.blockingGet(BlockingSingleSubscriber.java:93)&#xD;
-		at reactor.core.publisher.Mono.block(Mono.java:1495)&#xD;
-		... 2 more
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;That is because, as we saw previously, there is an additional &amp;ldquo;boundary&amp;rdquo; in code between &lt;em&gt;assembly&lt;/em&gt; and &lt;em&gt;subscription&lt;/em&gt;. The trail only goes back to the point of &lt;strong&gt;subscription&lt;/strong&gt; (here the &lt;code&gt;block()&lt;/code&gt;) :-(&lt;/p&gt;
-&lt;p&gt;So using stacktraces for analysis and debugging purposes is harder in an asynchronous world, and even a bit harder in Reactor (because it is asynchronous and has a lazy-by-default approach with assembly vs subscription). But fortunately there are tools in the library to try and alleviate that fact.&lt;/p&gt;&lt;h2&gt;&lt;a href="#making-things-better" class="anchor" name="making-things-better"&gt;&lt;/a&gt;Making Things Better&lt;/h2&gt;&lt;h3&gt;&lt;a href="#back-to-classics-code-log-code" class="anchor" name="back-to-classics-code-log-code"&gt;&lt;/a&gt;Back to classics: &lt;code&gt;log&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;Remember when you sprinkled your imperative code with &lt;code&gt;print&lt;/code&gt; statements? It might not be as cool as firing up the step debugger, but sometimes it is the quick and dirty solution you need.&lt;/p&gt;
-&lt;p&gt;In Reactor, you have the &lt;code&gt;log()&lt;/code&gt; operator:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;It logs Reactive Stream signals: &lt;code&gt;onNext&lt;/code&gt;, &lt;code&gt;onComplete&lt;/code&gt;, &lt;code&gt;onError&lt;/code&gt; (and &lt;strong&gt;even&lt;/strong&gt; &lt;code&gt;onSubscribe&lt;/code&gt;, &lt;code&gt;cancel&lt;/code&gt; and &lt;code&gt;request&lt;/code&gt;!)&lt;/li&gt;
-  &lt;li&gt;You can tune it to whitelist only part of these signals&lt;/li&gt;
-  &lt;li&gt;You can choose a particular &lt;code&gt;Logger&lt;/code&gt; as well&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;In short, &lt;code&gt;log&lt;/code&gt; is the quick and dirty solution to get an easy bird eye&amp;rsquo;s view of what is going on at one step of your sequence. Use it liberally during development, with the possibility of specifying a &amp;ldquo;name&amp;rdquo; to each &lt;code&gt;log&lt;/code&gt; call to differentiate them.&lt;/p&gt;
-&lt;p&gt;Using &lt;code&gt;log(String)&lt;/code&gt; can be diverted to get a hint at which source causes the error:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void log() {&#xD;
-		int seconds = LocalTime.now().getSecond();&#xD;
-		Mono&amp;lt;Integer&amp;gt; source;&#xD;
-		if (seconds % 2 == 0) {&#xD;
-			source = Flux.range(1, 10)&#xD;
-			             .elementAt(5)&#xD;
-			             .log(&amp;quot;source A&amp;quot;);&#xD;
-		}&#xD;
-		else if (seconds % 3 == 0) {&#xD;
-			source = Flux.range(0, 4)&#xD;
-			             .elementAt(5)&#xD;
-			             .log(&amp;quot;source B&amp;quot;);&#xD;
-		}&#xD;
-		else {&#xD;
-			source = Flux.just(1, 2, 3, 4)&#xD;
-			             .elementAt(5)&#xD;
-			             .log(&amp;quot;source C&amp;quot;);&#xD;
-		}&#xD;
-&#xD;
-		source.block(); //line 138&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The stacktrace itself isn&amp;rsquo;t much more interesting (apart from mentioning the &lt;code&gt;MonoLogFuseable&lt;/code&gt; class, but the log itself contains this interesting tidbit:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;17:01:23.711 [main] INFO  source C - | onSubscribe([Fuseable] MonoElementAt.ElementAtSubscriber)&#xD;
-17:01:23.716 [main] INFO  source C - | request(unbounded)&#xD;
-17:01:23.717 [main] ERROR source C - | onError(java.lang.IndexOutOfBoundsException)&#xD;
-17:01:23.721 [main] ERROR source C - &#xD;
-java.lang.IndexOutOfBoundsException: null
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;At least we get our hardcoded &lt;code&gt;source C&lt;/code&gt; label&amp;hellip;&lt;/p&gt;&lt;h3&gt;&lt;a href="#enriching-stacktraces-with-debug-mode" class="anchor" name="enriching-stacktraces-with-debug-mode"&gt;&lt;/a&gt;Enriching stacktraces with Debug Mode&lt;/h3&gt;
-&lt;p&gt;Another approach that is available in Reactor is to try and get back the assembly information in the runtime stacktraces.&lt;/p&gt;
-&lt;p&gt;This can be done by activating the so-called &amp;ldquo;debug mode&amp;rdquo; via the &lt;code&gt;Hooks&lt;/code&gt; class:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;Hooks.onOperatorDebug();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;What does it do? It makes each operator instantiation (aka assembly) capture a stacktrace and keep it for later.&lt;/p&gt;
-&lt;p&gt;If an &lt;code&gt;onError&lt;/code&gt; reaches one operator, it will attach that assembly stacktrace to the &lt;code&gt;onError&lt;/code&gt; &amp;rsquo;s &lt;code&gt;Throwable&lt;/code&gt; (as a &lt;strong&gt;suppressed &lt;code&gt;Exception&lt;/code&gt;&lt;/strong&gt;). As a result, when you see the stacktrace you&amp;rsquo;ll get a more complete picture of both the runtime AND the assembly.&lt;/p&gt;
-&lt;p&gt;With debug mode on, in our earlier example we would be able to see which assembly path was taken and which source was actually processed:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void hook() {&#xD;
-		Hooks.onOperatorDebug();&#xD;
-		try {&#xD;
-			int seconds = LocalTime.now().getSecond();&#xD;
-			Mono&amp;lt;Integer&amp;gt; source;&#xD;
-			if (seconds % 2 == 0) {&#xD;
-				source = Flux.range(1, 10)&#xD;
-				             .elementAt(5); //line 149&#xD;
-			}&#xD;
-			else if (seconds % 3 == 0) {&#xD;
-				source = Flux.range(0, 4)&#xD;
-				             .elementAt(5); //line 153&#xD;
-			}&#xD;
-			else {&#xD;
-				source = Flux.just(1, 2, 3, 4)&#xD;
-				             .elementAt(5); //line 157&#xD;
-			}&#xD;
-&#xD;
-			source.block(); //line 160&#xD;
-		}&#xD;
-		finally {&#xD;
-			Hooks.resetOnOperatorDebug();&#xD;
-		}&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Which produces the following stacktrace:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;java.lang.IndexOutOfBoundsException&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onComplete(MonoElementAt.java:153)&#xD;
-(...)&#xD;
-	at reactor.core.publisher.Mono.block(Mono.java:1494)&#xD;
-	at Scratch.hook(Scratch.java:160)&#xD;
-	at Scratch.main(Scratch.java:54)&#xD;
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: &#xD;
-Assembly trace from producer [reactor.core.publisher.MonoElementAt] :&#xD;
-	reactor.core.publisher.Flux.elementAt(Flux.java:4367)&#xD;
-	Scratch.hook(Scratch.java:157)&#xD;
-Error has been observed by the following operator(s):&#xD;
-	|_	Flux.elementAt ? Scratch.hook(Scratch.java:157)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Notice the last line? Yay :-D&lt;/p&gt;&lt;h3&gt;&lt;a href="#bringing-the-cost-down-with-code-checkpoint-code" class="anchor" name="bringing-the-cost-down-with-code-checkpoint-code"&gt;&lt;/a&gt;Bringing the cost down with &lt;code&gt;checkpoint&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;One drawback of using &lt;code&gt;Hooks.onOperatorDebug()&lt;/code&gt; is that it does the assembly stacktrace capture &lt;strong&gt;for every single operator used in the application&lt;/strong&gt;. Filling a single stacktrace is a costly operation, so it goes without saying that this can have an heavy impact on performance. As a result, this is only recommended in a development setting.&lt;/p&gt;
-&lt;p&gt;Fortunately, you can bring the cost down a little if you identify parts of your codebase that are prone to that sort of source ambiguity.&lt;/p&gt;
-&lt;p&gt;By using the &lt;code&gt;checkpoint()&lt;/code&gt; operator, it is possible to activate the assembly trace capture only at that specific point in the codebase. You can even do entirely without the filling of a stacktrace if you give the checkpoint a unique and meaningful name using &lt;code&gt;checkpoint(String)&lt;/code&gt;:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;	private static void checkpoint() {&#xD;
-		int seconds = LocalTime.now().getSecond();&#xD;
-		Mono&amp;lt;Integer&amp;gt; source;&#xD;
-		if (seconds % 2 == 0) {&#xD;
-			source = Flux.range(1, 10)&#xD;
-			             .elementAt(5)&#xD;
-			             .checkpoint(&amp;quot;source range(1,10)&amp;quot;);&#xD;
-		}&#xD;
-		else if (seconds % 3 == 0) {&#xD;
-			source = Flux.range(0, 4)&#xD;
-			             .elementAt(5)&#xD;
-			             .checkpoint(&amp;quot;source range(0,4)&amp;quot;);&#xD;
-		}&#xD;
-		else {&#xD;
-			source = Flux.just(1, 2, 3, 4)&#xD;
-			             .elementAt(5)&#xD;
-			             .checkpoint(&amp;quot;source just(1,2,3,4)&amp;quot;);&#xD;
-		}&#xD;
-&#xD;
-		source.block(); //line 186&#xD;
-	}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This produces the following stacktrace:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;java.lang.IndexOutOfBoundsException&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onComplete(MonoElementAt.java:153)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.fastPath(FluxArray.java:176)&#xD;
-	at reactor.core.publisher.FluxArray$ArraySubscription.request(FluxArray.java:96)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.request(MonoElementAt.java:92)&#xD;
-	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.request(FluxOnAssembly.java:438)&#xD;
-	at reactor.core.publisher.BlockingSingleSubscriber.onSubscribe(BlockingSingleSubscriber.java:49)&#xD;
-	at reactor.core.publisher.FluxOnAssembly$OnAssemblySubscriber.onSubscribe(FluxOnAssembly.java:422)&#xD;
-	at reactor.core.publisher.MonoElementAt$ElementAtSubscriber.onSubscribe(MonoElementAt.java:107)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:53)&#xD;
-	at reactor.core.publisher.FluxArray.subscribe(FluxArray.java:59)&#xD;
-	at reactor.core.publisher.MonoElementAt.subscribe(MonoElementAt.java:59)&#xD;
-	at reactor.core.publisher.MonoOnAssembly.subscribe(MonoOnAssembly.java:61)&#xD;
-	at reactor.core.publisher.Mono.block(Mono.java:1494)&#xD;
-	at Scratch.checkpoint(Scratch.java:186)&#xD;
-	at Scratch.main(Scratch.java:55)&#xD;
-	Suppressed: reactor.core.publisher.FluxOnAssembly$OnAssemblyException: &#xD;
-Assembly site of producer [reactor.core.publisher.MonoElementAt] is identified by light checkpoint [source just(1,2,3,4)].
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Notice the &lt;code&gt;is identified by light checkpoint [source just(1,2,3,4)].&lt;/code&gt;, which gives us our culprit (because we used a meaningful description for the checkpoint).&lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;In this article, we&amp;rsquo;ve learned that stacktraces can be less useful in asynchronous programming. This effect is further compounded by the lazy way Reactor let you build reactive sequences.&lt;/p&gt;
-&lt;p&gt;We&amp;rsquo;ve looked at the worst cases that can be encountered and at several ways this problem can be lessened.&lt;/p&gt;
-&lt;p&gt;The whole code can be found in a gist &lt;a href="https://gist.github.com/simonbasle/a4c6cfe79071610e1fe3bd27984d4381"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;In the next instalment, we&amp;rsquo;ll see why we sometimes say that Reactor is &amp;ldquo;Concurrent Agnostic&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;In the meantime, happy reactive coding!&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Introducing Spring Cloud Circuit Breaker</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/16/introducing-spring-cloud-circuit-breaker" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Ryan Baxter</name>
-    </author>
-    <id>tag:spring.io,2019-04-15:3643</id>
-    <updated>2019-04-16T15:54:00Z</updated>
-    <content type="html">&lt;h1&gt;&lt;a href="#background" class="anchor" name="background"&gt;&lt;/a&gt;Background&lt;/h1&gt;
-&lt;p&gt;When using a microservices architecture to build our applications, it is very common to end up with a pretty complex dependency tree amongst services. If the service down the dependency tree encounters an issue that causes it to start to respond slowly, it ends up causing a set of issues that cascade up the dependency tree. As more and more requests come in to the application, more and more resources may be consumed by waiting for the slow service to respond. Even worse, the additional load being put on the slow service may exacerbate the problem. To help alleviate the effect of these types of cascading failures, it is common practice to use &lt;a href="https://microservices.io/patterns/reliability/circuit-breaker.html"&gt;circuit breakers&lt;/a&gt; as part of microservice applications.&lt;/p&gt;
-&lt;p&gt;Spring Cloud has &lt;a href="https://spring.io/guides/gs/circuit-breaker/"&gt;let developers add circuit breakers&lt;/a&gt; to their application by using &lt;a href="https://github.com/Netflix/Hystrix"&gt;Netflix Hystrix&lt;/a&gt; as part of the &lt;a href="https://github.com/spring-cloud/spring-cloud-netflix"&gt;Spring Cloud Netflix project&lt;/a&gt;. In addition to Hystrix, Spring Cloud developers may want to use other circuit breaker implementations. To help Spring Cloud developers add circuit breakers to their applications in a consistent manner, we have introduced the &lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-circuitbreaker"&gt;Spring Cloud Circuit Breaker project&lt;/a&gt; as part of the Spring Cloud incubator.&lt;/p&gt;&lt;h1&gt;&lt;a href="#about" class="anchor" name="about"&gt;&lt;/a&gt;About&lt;/h1&gt;
-&lt;p&gt;The Spring Cloud Circuit Breaker project provides an abstraction API for adding circuit breakers to your application. At the time of this blog post, there are four supported implementations:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://github.com/Netflix/Hystrix"&gt;Hystrix&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/resilience4j/resilience4j"&gt;Resilience4J&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/alibaba/Sentinel"&gt;Sentinel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-retry"&gt;Spring Retry&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To use a given implementation, add the appropriate &lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-circuitbreaker/tree/master/spring-cloud-starter-circuitbreaker"&gt;starter&lt;/a&gt; to your application&amp;rsquo;s classpath.&lt;/p&gt;&lt;h1&gt;&lt;a href="#using-spring-cloud-circuit-breaker" class="anchor" name="using-spring-cloud-circuit-breaker"&gt;&lt;/a&gt;Using Spring Cloud Circuit Breaker&lt;/h1&gt;
-&lt;p&gt;Currently, Spring Cloud Circuit Breaker is not part of the Spring Cloud BOM and is being published only to our &lt;a href="https://repo.spring.io/snapshot/org/springframework/cloud/spring-cloud-circuitbreaker/"&gt;snapshot repo&lt;/a&gt;. You need to add our snapshot repo to your Maven or Gradle file. The following example uses Maven:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;repositories&amp;gt;&#xD;
-    &amp;lt;repository&amp;gt;&#xD;
-        &amp;lt;id&amp;gt;spring-snapshots&amp;lt;/id&amp;gt;&#xD;
-        &amp;lt;name&amp;gt;Spring Snapshots&amp;lt;/name&amp;gt;&#xD;
-        &amp;lt;url&amp;gt;https://repo.spring.io/libs-snapshot-local&amp;lt;/url&amp;gt;&#xD;
-        &amp;lt;snapshots&amp;gt;&#xD;
-            &amp;lt;enabled&amp;gt;true&amp;lt;/enabled&amp;gt;&#xD;
-        &amp;lt;/snapshots&amp;gt;&#xD;
-        &amp;lt;releases&amp;gt;&#xD;
-            &amp;lt;enabled&amp;gt;false&amp;lt;/enabled&amp;gt;&#xD;
-        &amp;lt;/releases&amp;gt;&#xD;
-    &amp;lt;/repository&amp;gt;&#xD;
-&amp;lt;/repositories&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Next, you need to add the Spring Cloud Circuit Breaker dependency to your application. Again, the following example uses Maven:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;dependencies&amp;gt;&#xD;
-    &amp;lt;dependency&amp;gt;&#xD;
-        &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;lt;/groupId&amp;gt;&#xD;
-        &amp;lt;artifactId&amp;gt;&#xD;
-            spring-cloud-starter-circuitbreaker-resilience4j&#xD;
-       &amp;lt;/artifactId&amp;gt;&#xD;
-        &amp;lt;version&amp;gt;0.0.1.BUILD-SNAPSHOT&amp;lt;/version&amp;gt;&#xD;
-    &amp;lt;/dependency&amp;gt;&#xD;
-&amp;lt;/dependencies&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Spring Cloud Circuit Breaker auto-configures an implementation of &lt;code&gt;CircuitBreakerFactory&lt;/code&gt;, based on the starter on your application&amp;rsquo;s classpath. You can then inject this interface into any class you want. The following example shows how to do so:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;@Service&#xD;
-public static class DemoControllerService {&#xD;
-	private RestTemplate rest;&#xD;
-	private CircuitBreakerFactory cbFactory;&#xD;
-&#xD;
-	public DemoControllerService(RestTemplate rest, &#xD;
-                CircuitBreakerFactory cbFactory) {&#xD;
-		this.rest = rest;&#xD;
-		this.cbFactory = cbFactory;&#xD;
-	}&#xD;
-&#xD;
-	public String slow() {&#xD;
-		return cbFactory.create(&amp;quot;slow&amp;quot;).run(() -&amp;gt; &#xD;
-                rest.getForObject(&amp;quot;/slow&amp;quot;, String.class),&#xD;
-                throwable -&amp;gt; &amp;quot;fallback&amp;quot;);&#xD;
-	}&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Most implementations also support Reactive APIs. Currently, Spring Retry is the only implementation that does not have a reactive implementation. If you want to wrap some reactive code in a circuit breaker ,you need to use &lt;code&gt;ReactiveCircuitBreakerFactory&lt;/code&gt;. The following example shows how to do so:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;@Service&#xD;
-public static class DemoControllerService {&#xD;
-	private ReactiveCircuitBreakerFactory cbFactory;&#xD;
-	private WebClient webClient;&#xD;
-&#xD;
-&#xD;
-	public DemoControllerService(WebClient webClient, &#xD;
-                ReactiveCircuitBreakerFactory cbFactory) {&#xD;
-		this.webClient = webClient;&#xD;
-		this.cbFactory = cbFactory;&#xD;
-	}&#xD;
-&#xD;
-	public Mono&amp;lt;String&amp;gt; slow() {&#xD;
-		return webClient.get().uri(&amp;quot;/slow&amp;quot;).retrieve()&#xD;
-                .bodyToMono(String.class).transform(it -&amp;gt; {&#xD;
-			CircuitBreaker cb = cbFactory.create(&amp;quot;slow&amp;quot;);&#xD;
-			return cb.run(it, throwable -&amp;gt; &#xD;
-                            Mono.just(&amp;quot;fallback&amp;quot;));&#xD;
-                });&#xD;
-	}&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h1&gt;&lt;a href="#configuring-circuit-breakers" class="anchor" name="configuring-circuit-breakers"&gt;&lt;/a&gt;Configuring Circuit Breakers&lt;/h1&gt;
-&lt;p&gt;In most cases, you are going to want to configure the behavior of your circuit breakers. To do so, you can create beans of type &lt;code&gt;Customizer&lt;/code&gt;. Spring Cloud Circuit Breaker lets you provide a default configuration for all circuit breakers as well as configuration for specific circuit breakers. For example, to provide a default configuration for all circuit breakers when using Resilience4J you could add the following bean to a configuration class:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;@Bean&#xD;
-public Customizer&amp;lt;Resilience4JCircuitBreakerFactory&amp;gt; defaultCustomizer() {&#xD;
-	return factory -&amp;gt; factory.configureDefault(&#xD;
-            id -&amp;gt; new Resilience4JConfigBuilder(id)&#xD;
-            .timeLimiterConfig(TimeLimiterConfig.custom()&#xD;
-                .timeoutDuration(Duration.ofSeconds(4)).build())&#xD;
-            .circuitBreakerConfig(CircuitBreakerConfig.ofDefaults())&#xD;
-            .build());&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The code to configure an individual circuit breaker would look very similar, except you would provide a circuit breaker ID in your &lt;code&gt;Customizer&lt;/code&gt;, as follows:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint"&gt;@Bean&#xD;
-public Customizer&amp;lt;Resilience4JCircuitBreakerFactory&amp;gt; slowCustomizer() {&#xD;
-	return factory -&amp;gt; factory.configure(builder -&amp;gt; {&#xD;
-		return builder&#xD;
-			.timeLimiterConfig(TimeLimiterConfig.custom()&#xD;
-                            .timeoutDuration(Duration.ofSeconds(2)).build())&#xD;
-			.circuitBreakerConfig(&#xD;
-                            CircuitBreakerConfig.ofDefaults());&#xD;
-	}, &amp;quot;slow&amp;quot;);&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;h1&gt;&lt;a href="#feedback" class="anchor" name="feedback"&gt;&lt;/a&gt;Feedback&lt;/h1&gt;
-&lt;p&gt;We look forward to hearing what you think about this new project. Check out the &lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-circuitbreaker"&gt;GitHub project&lt;/a&gt; as well as the &lt;a href="https://spring-cloud-incubator.github.io/spring-cloud-circuitbreaker/spring-cloud-circuitbreaker.html"&gt;documentation&lt;/a&gt; for more information. As always, you can reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud"&gt;Stack Overflow&lt;/a&gt; and &lt;a href="https://gitter.im/spring-cloud/spring-cloud"&gt;Gitter&lt;/a&gt; or by creating a &lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-circuitbreaker/issues"&gt;GitHub issue&lt;/a&gt;.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security 5.2.0.M2 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/16/spring-security-5-2-0-m2-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Josh Cummings</name>
-    </author>
-    <id>tag:spring.io,2019-04-15:3644</id>
-    <updated>2019-04-16T15:25:35Z</updated>
-    <content type="html">&lt;div class="paragraph"&gt;
-&lt;p&gt;On behalf of the community, I’m pleased to announce the release of
-Spring Security 5.2.0.M2! This release includes
-&lt;a href="https://github.com/spring-projects/spring-security/milestone/132?closed=1"&gt;100+
-updates&lt;/a&gt;. You can find the highlights below:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="oauth-2-0"&gt;&lt;a class="anchor" href="#oauth-2-0"&gt;&lt;/a&gt;OAuth 2.0&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6446-gh-6446-a-client-support-for-pkce"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6446-gh-6446-a-client-support-for-pkce"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6446"&gt;gh-6446&lt;/a&gt; - Client Support for PKCE&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="https://tools.ietf.org/html/rfc7636"&gt;PKCE&lt;/a&gt; isn&amp;#8217;t just for &lt;a href="https://tools.ietf.org/html/rfc8252"&gt;native&lt;/a&gt; or &lt;a href="https://tools.ietf.org/html/draft-ietf-oauth-browser-based-apps-01"&gt;browser-based apps&lt;/a&gt;, but for any time we want to have a public client. Spring Security 5.2 introduces a secure way for backends to authenticate as public clients.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-5350-gh-5350-a-openid-connect-rp-initiated-logout"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-5350-gh-5350-a-openid-connect-rp-initiated-logout"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/5350"&gt;gh-5350&lt;/a&gt; - OpenID Connect RP-Initiated Logout&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-5465-gh-5465-a-ability-to-use-symmetric-keys-with-code-jwtdecoder-code"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-5465-gh-5465-a-ability-to-use-symmetric-keys-with-code-jwtdecoder-code"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/5465"&gt;gh-5465&lt;/a&gt; - Ability to use symmetric keys with &lt;code&gt;JwtDecoder&lt;/code&gt;&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-5937-gh-5397-a-ability-for-code-nimbusreactivejwtdecoder-code-to-take-a-custom-processor"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-5937-gh-5397-a-ability-for-code-nimbusreactivejwtdecoder-code-to-take-a-custom-processor"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/5937"&gt;gh-5397&lt;/a&gt; - Ability for &lt;code&gt;NimbusReactiveJwtDecoder&lt;/code&gt; to take a custom processor&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6513-gh-6513-a-a-href-https-github-com-spring-projects-spring-security-issues-5200-gh-5200-a-support-for-resource-server-token-introspection"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6513-gh-6513-a-a-href-https-github-com-spring-projects-spring-security-issues-5200-gh-5200-a-support-for-resource-server-token-introspection"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6513"&gt;gh-6513&lt;/a&gt; &amp;amp; &lt;a href="https://github.com/spring-projects/spring-security/issues/5200"&gt;gh-5200&lt;/a&gt; - Support for Resource Server Token Introspection&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Resource Server now supports a second OAuth 2.0 token verification strategy: &lt;a href="https://github.com/spring-projects/spring-security/tree/master/samples/boot/oauth2resourceserver-opaque"&gt;Token Introspection&lt;/a&gt;. This is handy when a Resource Server wants to or must verify the token remotely.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-5351-gh-5351-a-support-for-resource-server-multi-tenancy-servlet-only"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-5351-gh-5351-a-support-for-resource-server-multi-tenancy-servlet-only"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/5351"&gt;gh-5351&lt;/a&gt; - Support for Resource Server Multi-tenancy (Servlet only)&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;With the introduction of &lt;code&gt;AuthenticationManagerResolver&lt;/code&gt;, initial support for &lt;a href="https://github.com/spring-projects/spring-security/tree/master/samples/boot/oauth2resourceserver-multitenancy"&gt;multi-tenant Resource Servers&lt;/a&gt; has arrived.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="core"&gt;&lt;a class="anchor" href="#core"&gt;&lt;/a&gt;Core&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6494-gh-6494-a-converting-key-material-into-code-key-code-instances"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6494-gh-6494-a-converting-key-material-into-code-key-code-instances"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6494"&gt;gh-6494&lt;/a&gt; - Converting key material into &lt;code&gt;Key&lt;/code&gt; instances&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Spring Security 5.2 simplifies converting X.509 and PKCS#8 key material into &lt;code&gt;RSAPublicKey&lt;/code&gt; and &lt;code&gt;RSAPrivateKey&lt;/code&gt; instances by registering &lt;code&gt;Converter&lt;/code&gt; s to the &lt;code&gt;ConversionService&lt;/code&gt; and &lt;code&gt;PropertyEditor&lt;/code&gt; s to the &lt;code&gt;PropertyEditorRegistry&lt;/code&gt;. You can see an example in the &lt;a href="https://github.com/spring-projects/spring-security/blob/master/samples/boot/oauth2resourceserver-static/src/main/java/sample/OAuth2ResourceServerSecurityConfiguration.java#L34"&gt;Resource Server static key sample&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6774-gh-6774-a-support-for-jdk-12"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6774-gh-6774-a-support-for-jdk-12"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6774"&gt;gh-6774&lt;/a&gt; - Support for JDK 12&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6722-gh-6722-a-introducing-code-authenticationmanagerresolver-code"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6722-gh-6722-a-introducing-code-authenticationmanagerresolver-code"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6722"&gt;gh-6722&lt;/a&gt; - Introducing &lt;code&gt;AuthenticationManagerResolver&lt;/code&gt;&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6546-gh-6546-a-introducing-code-currentsecuritycontext-code-for-method-arguments"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6546-gh-6546-a-introducing-code-currentsecuritycontext-code-for-method-arguments"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6546"&gt;gh-6546&lt;/a&gt; - Introducing &lt;code&gt;@CurrentSecurityContext&lt;/code&gt; for method arguments&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;Like &lt;code&gt;@AuthenticationPrincipal&lt;/code&gt; before it, &lt;code&gt;@CurrentSecurityContext&lt;/code&gt; works with an argument resolver to retrieve aspects of the &lt;code&gt;SecurityContext&lt;/code&gt;:&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="listingblock"&gt;
-&lt;div class="content"&gt;
-&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-java" data-lang="java"&gt;public String hello(@CurrentSecurityContext
-        SecurityContext context) {
-    return Optional.ofNullable(context.getAuthentication())
-            .map(Authentication::getName).orElse("world");
-}
-
-// or
-
-public String hello(@CurrentSecurityContext
-        (expression="authentication.name") String name) {
-    return Optional.ofNullable(name).orElse("world");
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="sect1"&gt;
-&lt;h2 id="web"&gt;&lt;a class="anchor" href="#web"&gt;&lt;/a&gt;Web&lt;/h2&gt;
-&lt;div class="sectionbody"&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-4187-gh-4187-a-support-for-the-clear-site-data-header"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-4187-gh-4187-a-support-for-the-clear-site-data-header"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/4187"&gt;gh-4187&lt;/a&gt; - Support for the Clear-Site-Data header&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6312-gh-6312-a-support-for-hsts-preload"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6312-gh-6312-a-support-for-hsts-preload"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6312"&gt;gh-6312&lt;/a&gt; - Support for HSTS preload&lt;/h5&gt;
-
-&lt;/div&gt;
-&lt;div class="sect4"&gt;
-&lt;h5 id="a-href-https-github-com-spring-projects-spring-security-issues-6453-gh-6453-a-introducing-code-compositeheaderwriter-code-as-well-as-some-other-a-href-https-github-com-spring-projects-spring-security-issues-6454-header-writing-cleanup-a"&gt;&lt;a class="anchor" href="#a-href-https-github-com-spring-projects-spring-security-issues-6453-gh-6453-a-introducing-code-compositeheaderwriter-code-as-well-as-some-other-a-href-https-github-com-spring-projects-spring-security-issues-6454-header-writing-cleanup-a"&gt;&lt;/a&gt;&lt;a href="https://github.com/spring-projects/spring-security/issues/6453"&gt;gh-6453&lt;/a&gt; - Introducing &lt;code&gt;CompositeHeaderWriter&lt;/code&gt;, as well as some other &lt;a href="https://github.com/spring-projects/spring-security/issues/6454"&gt;header-writing cleanup&lt;/a&gt;.&lt;/h5&gt;
-&lt;div class="paragraph"&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-security/"&gt;Project Site&lt;/a&gt; |
-&lt;a href="https://docs.spring.io/spring-security/site/docs/5.2.0.M2/reference/htmlsingle/"&gt;Reference&lt;/a&gt;
-| &lt;a href="http://stackoverflow.com/questions/tagged/spring-security"&gt;Help&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Boot 2.2 M2</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/04/16/spring-boot-2-2-m2" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Brian Clozel</name>
-    </author>
-    <id>tag:spring.io,2019-04-16:3646</id>
-    <updated>2019-04-16T13:40:04Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone that contributed, I am pleased to announce that the second milestone of Spring Boot 2.2 has been released and is available from &lt;a href="http://repo.spring.io/milestone/"&gt;our milestone repository&lt;/a&gt;. This release closes almost &lt;a href="https://github.com/spring-projects/spring-boot/milestone/134?closed=1"&gt;100 issues and pull requests&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Highlights of this milestone include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Framework 5.2.0.M1&lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;@ConfigurationProperties&lt;/code&gt; scanning&lt;/li&gt;
-  &lt;li&gt;Immutable &lt;code&gt;@ConfigurationProperties&lt;/code&gt; binding&lt;/li&gt;
-  &lt;li&gt;Initial RSocket Server Support&lt;/li&gt;
-  &lt;li&gt;Lazy Initialization and performance improvements&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For a complete list of changes and upgrade instructions, please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.2-Release-Notes"&gt;Spring Boot 2.2 Release Notes&lt;/a&gt; on the wiki and the &lt;a href="http://docs.spring.io/spring-boot/docs/2.2.0.M2/reference/html/"&gt;updated reference documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;If you want to get started with 2.2 and try out the new features, you can bootstrap a new project on &lt;a href="https://start.spring.io"&gt;https://start.spring.io&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://projects.spring.io/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-boot/docs/2.2.0.M2/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;</content>
   </entry>
 </feed>

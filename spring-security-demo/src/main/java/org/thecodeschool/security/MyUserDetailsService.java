@@ -1,4 +1,4 @@
-package org.thecodeschool.security.browser;
+package org.thecodeschool.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,10 +9,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.social.security.SocialUser;
+import org.springframework.social.security.SocialUserDetails;
+import org.springframework.social.security.SocialUserDetailsService;
 import org.springframework.stereotype.Component;
 
 @Component //register as a bean
-public class MyUserDetailsService implements UserDetailsService{
+public class MyUserDetailsService implements UserDetailsService, SocialUserDetailsService{
 	
 	private Logger logger = LoggerFactory.getLogger(getClass());
 	//@Autowired
@@ -36,6 +39,13 @@ public class MyUserDetailsService implements UserDetailsService{
 		//logger.info(passwordEncoder.encode(username));
 		
 		return new User(username,passwordEncoder.encode("password"),AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+	}
+
+	@Override
+	public SocialUserDetails loadUserByUserId(String userId) throws UsernameNotFoundException {
+		logger.info("Login Username: "+userId);
+		
+		return new SocialUser(userId,passwordEncoder.encode("password"),AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 	}
 
 }

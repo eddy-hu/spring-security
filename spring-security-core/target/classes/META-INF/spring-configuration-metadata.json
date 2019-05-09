@@ -17,6 +17,11 @@
       "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
       "name": "tcs.security.code",
       "type": "org.thecodeschool.security.core.properties.ValidateCodeProperties"
+    },
+    {
+      "sourceType": "org.thecodeschool.security.core.properties.SecurityProperties",
+      "name": "tcs.security.social",
+      "type": "org.thecodeschool.security.core.properties.SocialProperties"
     }
   ]
 }
